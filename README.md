@@ -89,7 +89,7 @@ Provided recommendations including:
 
 ---
 
-#  Tools & Technologies Used
+#  Tools & Technologies Used in generating the logsas contained in the repository
 
 - Kali Linux
 - Nmap
