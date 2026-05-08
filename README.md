@@ -2,7 +2,7 @@
 ```markdown id="i6lw5m"
 # Cybersecurity Capstone Project – Securing NovaTech Solutions
 
-## 📌 Project Overview
+##  Project Overview
 
 This repository contains my completed cybersecurity capstone project focused on investigating and securing the network environment of **NovaTech Solutions**, a growing technology consulting company. The project simulates a real-world cybersecurity assessment involving networking analysis, SOC investigation, penetration testing validation, vulnerability assessment, and risk reporting.
 
@@ -10,7 +10,7 @@ The objective of this project was to identify potential security weaknesses with
 
 ---
 
-## 🏢 Scenario
+##  Scenario
 
 NovaTech Solutions recently deployed:
 - An internal employee portal
@@ -27,7 +27,7 @@ As a junior cybersecurity consultant, I was tasked with investigating these issu
 
 ---
 
-# 🎯 Project Objectives
+#  Project Objectives
 
 This capstone demonstrates the ability to:
 
@@ -40,7 +40,7 @@ This capstone demonstrates the ability to:
 
 ---
 
-# 🖥️ Network Environment
+#  Network Environment
 
 ## Internal Network
 `192.168.10.0/24`
@@ -57,29 +57,29 @@ This capstone demonstrates the ability to:
 
 ---
 
-# 📚 Project Tasks
+#  Project Tasks
 
-## 🔹 Task 1 — Networking Fundamentals
+##  Task 1 — Networking Fundamentals
 - Reviewed network topology and traffic logs
 - Identified suspicious IP addresses and protocols
 - Analyzed possible attack paths and exposed systems
 
-## 🔹 Task 2 — SOC Analysis & Alert Investigation
+##  Task 2 — SOC Analysis & Alert Investigation
 - Investigated SIEM alerts
 - Identified Indicators of Compromise (IOCs)
 - Determined potential attack types
 - Recommended incident response actions
 
-## 🔹 Task 3 — Penetration Testing & Vulnerability Analysis
+##  Task 3 — Penetration Testing & Vulnerability Analysis
 - Reviewed Nmap scan results
 - Identified exposed services and vulnerabilities
 - Analyzed security risks related to exposed databases and outdated services
 
-## 🔹 Task 4 — GRC Risk Assessment
+##  Task 4 — GRC Risk Assessment
 - Conducted risk analysis for organizational assets
 - Evaluated threats, risks, and mitigation strategies
 
-## 🔹 Task 5 — Security Recommendations
+##  Task 5 — Security Recommendations
 Provided recommendations including:
 - Multi-Factor Authentication (MFA)
 - Port restrictions
@@ -89,7 +89,7 @@ Provided recommendations including:
 
 ---
 
-# 🛠️ Tools & Technologies Used
+#  Tools & Technologies Used
 
 - Kali Linux
 - Nmap
@@ -100,7 +100,7 @@ Provided recommendations including:
 
 ---
 
-# 📄 Final Deliverables
+#  Final Deliverables
 
 The final report includes:
 - Executive Summary
@@ -112,7 +112,7 @@ The final report includes:
 
 ---
 
-# 🧠 Skills Demonstrated
+#  Skills Demonstrated
 
 - Vulnerability Assessment
 - Security Operations Center (SOC) Analysis
@@ -123,14 +123,13 @@ The final report includes:
 
 ---
 
-# ⚠️ Disclaimer
+#  Disclaimer
 
 This project was completed strictly for educational and training purposes in a controlled lab environment.
 
 ---
 
-# 👤 Author
-
+#  Author
 Sylvester Bassey
 
 ---
