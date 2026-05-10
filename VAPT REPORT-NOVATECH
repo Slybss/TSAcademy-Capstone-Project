@@ -1,1 +1,131 @@
 
+Vulnerability Assessment and Penetration Testing (VAPT) Report for NovaTech
+CLIENT NAME	NOVATECH
+ASSESSOR	SYLVESTER UDEME BASSEY
+DATE	MARCH 28TH 2026
+
+________________________________________
+ About NovaTech
+NovaTech is an IT Consulting firm operating internal network infrastructure supporting business operations, including web services, file storage, and database management. The organization relies on its IT infrastructure to deliver reliable services and maintain operational efficiency.
+________________________________________
+Private and Confidential
+This report is confidential and intended solely for NovaTech. Unauthorized disclosure or distribution is prohibited.
+Executive Summary
+This report presents the results of a Vulnerability Assessment and Penetration Testing (VAPT) conducted on NovaTech’s internal network and systems.
+The assessment identified several critical, high and medium-risk vulnerabilities, including exposed database services, weak authentication mechanisms, unauthorised access, outdated Apache webserver, and lack of network segmentation. 
+Security monitoring alerts also revealed suspicious activities such as brute-force login attempts, unauthorized FTP access, and abnormal outbound traffic from the web server.
+These findings indicate a likelihood of a full system compromise, with potential risks including data breaches, unauthorized access, and lateral movement within the network. Immediate remediation is strongly recommended.
+________________________________________
+Background
+The purpose of this assessment was to evaluate the security posture of NovaTech’s network architecture and identify vulnerabilities that could be exploited by attackers and proffer security recommendations to mitigate these risks.
+Objectives
+This report seeks to Identify the gaps and vulnerabilities within NovaTech systems  Assess risks associated to these vulnerabilities. Provide actionable remediation recommendations Evaluate possible attack pathways.
+Scope of Assessment
+NovaTech operates a flat network (192.168.10.0/24) with five main devices. As a result, the assessment covers the following assets:
+•	Web Server (192.168.10.20): this shows repeated connection with an external ip address. 
+•	File Server (192.168.10.25) responsible for storing company documents
+•	Database Server (192.168.10.30) contains sensitive documents
+•	Employee Workstations (192.168.10.15)
+•	Internal Network (192.168.10.0/24)
+Environment/Network Analysis
+Network	192.168.10.0/24
+Accessibility	Internal & Internet-facing (Webserver)
+Services	HTTP, FTP, SMB, MYSQL
+Authentication	Username/Password
+
+Key Findings
+Analysis of network traffic revealed several important observations:
+•	The Web Server (192.168.10.20) shows repeated outbound HTTP connections to external IP addresses, indicating suspicious behavior.
+•	Multiple protocols are in use, including: HTTP (web traffic), SMB (file sharing), MySQL (database communication), FTP (file transfer), DNS (name resolution).
+•	The File Server (192.168.10.25) is responsible for storing company documents.
+•	The Web Server communicates directly with the Database Server (192.168.10.30), creating a potential attack path.
+The web server is likely compromised or communicating with an external attacker.
+Tools Used
+Nmap, Hydra (Brute Force testing), FFUF (Directory Enumeration), Siem Log Analysis, Manual Testing Techniques. 
+SOC Alert Analysis
+The SIEM system generated multiple alerts indicating suspicious activity:
+Observed Alerts:
+•	Multiple failed login attempts from an external IP
+•	Suspicious outbound traffic from the web server
+•	Unauthorized FTP access attempts targeting the file server
+Identified Threats:
+•	Brute-force attack on authentication systems
+•	Possible Command-and-Control (C2) communication
+•	Attempted unauthorized access to internal systems
+Indicators of Compromise (IOCs):
+•	Malicious external IP addresses
+•	Repeated failed login attempts
+•	suspicious outbound traffic
+Immediate Actions Required:
+•	Isolate or separate the web server from the network
+•	Block malicious IP addresses at the firewall
+•	Review authentication and access logs
+•	Initiate incident response procedures
+Summary of Findings
+It was observed that the NovaTech System was exposed to a total of 5 security vulnerabilities during the given assessment tenure with 4 High, and 1 as Medium Severity vulnerabilities. 
+
+S/N	Vulnerability	Severity
+1	Weak Database Credential (root/root)	Critical	
+2	Open MySQL Port (3306)	High
+3	Anonymous FTP Access	High
+4	FTP service Enabled	High
+5	Outdated Apache server	Medium
+
+Vulnerability Details
+1. Weak Database Credentials (root/root)
+Severity: Critical
+Description
+The database server uses default credentials, making it highly vulnerable to unauthorized access.
+Impact
+•	Full database compromise
+•	Data theft and manipulation
+•	Privilege escalation
+Recommendation
+•	Enforce strong passwords
+•	Disable default accounts
+________________________________________
+ 2. Open MySQL Port (3306)
+Severity: High
+Description
+The database service is exposed to the network, allowing direct access.
+ Impact
+•	Unauthorized database access
+•	Data exfiltration
+ Recommendation
+•	Restrict access to internal trusted hosts
+•	Use firewall rules
+________________________________________
+3. Outdated Apache Version (2.4.29)
+Severity: Medium
+Description
+The web server is running outdated software.
+ Impact
+•	Exploitation of known vulnerabilities
+•	Remote code execution
+ Recommendation
+•	Update to latest version
+________________________________________
+Risk Assessment
+vulnerabilities and findings identified are categorized into the following risk levels:
+Asset	Threat	Risk	Recommendation
+Web Server	Brute force 	High	Enable MFA
+Web Server	Outdated software	High	Patch system
+Database Server	Unauthorized access	High	Restrict port
+Database Server	Weak credentials	Critical	Strong passwords
+File Server	Anonymous access	High	Disable FTP
+Network	Lateral movement	High	Segmentation
+Users	Weak passwords	High	Policy enforcement
+________________________________________
+Security Recommendations
+1.	Enable Multi-Factor Authentication (MFA) using authenticators.
+2.	Restrict Database access by closing unnecessary ports (3306, 21, 445) or configuring firewall rule.
+3.	Patch and update all systems by regularly updating security patches. 
+4.	Enforce strong password policies by defining lock-out policy, password length and complexity requirements.
+5.	Implement network segmentation by separating Webserver, Database and internal systems.
+6.	Replace FTP with SFTP by disabling ftp service and configuring ssh for more secure connection.
+7.	Deploy monitoring tools (IDS/IPS, SIEM)
+________________________________________
+Conclusion
+There are multiple high-risk vulnerabilities within the Novatech environment that if exploited could result in a complete system breach. The presence of weak authentication, exposed services, and lack of segmentation significantly increases the attack surface.
+Immediate implementation of recommended security controls is essential to improve the organization’s security posture and reduce risk exposure.
+
